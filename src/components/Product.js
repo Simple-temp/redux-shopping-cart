@@ -76,11 +76,11 @@ const Product = () => {
         <div className='container mt-5'>
             <Row>
                 <div className="filteritem d-flex justify-content-center my-5">
-                    <Button variant="outline-dark m-1" onClick={() => setFilter(data)}>All</Button>
-                    <Button variant="outline-dark m-1" onClick={() => filterproducts("men's clothing")}>Men's clothing</Button>
-                    <Button variant="outline-dark m-1" onClick={() => filterproducts("jewelery")}>Jewelery</Button>
-                    <Button variant="outline-dark m-1" onClick={() => filterproducts("electronics")}>Electronics</Button>
-                    <Button variant="outline-dark m-1" onClick={() => filterproducts("women's clothing")}>Women's clothing</Button>
+                    <Button className='button' variant="outline-dark m-1" onClick={() => setFilter(data)}>All</Button>
+                    <Button className='button' variant="outline-dark m-1" onClick={() => filterproducts("men's clothing")}>Men's clothing</Button>
+                    <Button className='button' variant="outline-dark m-1" onClick={() => filterproducts("jewelery")}>Jewelery</Button>
+                    <Button className='button' variant="outline-dark m-1" onClick={() => filterproducts("electronics")}>Electronics</Button>
+                    <Button className='button' variant="outline-dark m-1" onClick={() => filterproducts("women's clothing")}>Women's clothing</Button>
                 </div>
             </Row>
             <Row>

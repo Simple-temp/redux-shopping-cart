@@ -39,3 +39,9 @@ main{
   font-size:48px;
   color:rgb(255, 255, 255);
 }
+
+@media (max-width:465px) {
+  .filteritem .button{
+    font-size:12px;
+  }
+}

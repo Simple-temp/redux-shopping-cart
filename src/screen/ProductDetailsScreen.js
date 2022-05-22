@@ -2,8 +2,10 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import Skeleton from 'react-loading-skeleton';
+import { useDispatch } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useParams } from 'react-router-dom';
+import { addCart } from '../redux/Action';
 
 
 const ProductDetailsScreen = () => {
@@ -13,6 +15,10 @@ const ProductDetailsScreen = () => {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(false)
 
+    const dispatch = useDispatch()
+    const addToCart = (product) =>{
+        dispatch( addCart(product) )
+    }
 
     useEffect(() => {
 
@@ -60,7 +66,7 @@ const ProductDetailsScreen = () => {
                                 <p>{product.description}</p>
                                 <h5>Price : ${product.price}</h5>
                                 <h5>Rating : ({product.rating && product.rating.rate})</h5>
-                                <Button variant="outline-dark mt-4">Add to cart</Button>
+                                <Button variant="outline-dark mt-4" onClick={()=>addToCart(product)}>Add to cart</Button>
                                 <LinkContainer to="/cart">
                                     <Button variant="dark mt-4 mx-2">Go to cart</Button>
                                 </LinkContainer>
