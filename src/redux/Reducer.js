@@ -8,28 +8,37 @@ const handleCart = (state = cart, action) => {
         case "ADD_TO_CART":
             //if the product already exist
             const exist = state.find((x) => x.id === product.id)
-            localStorage.setItem("cartItem",JSON.stringify(exist))
             if (exist) {
                 //increase the quantity 
-                return state.map((x) => x.id === product.id ? { ...x, quantity: x.quantity + 1 } : x)
+                const increment = state.map((x) => x.id === product.id ? { ...x, quantity: x.quantity + 1 } : x)
+                return increment
             } else {
                 //do not increase the quantity the default quantity is 1
                 const product = action.payload
                 return [...state, { ...product, quantity: 1 }]
             }
             break;
-            
+
         case "REMOVE_TO_CART":
             // if the product already exist
             const exist1 = state.find((x) => x.id === product.id)
-            if(exist1.quantity === 1 ){
+            if (exist1.quantity === 1) {
                 // if the product quantity === 1 then delete the product
-                return state.filter((x) => x.id !== exist1.id)
-            }else{
+                const remove = state.filter((x) => x.id !== exist1.id)
+                return remove
+            } else {
                 // decrease the quantity
-                return state.map((x) => x.id === exist1.id ? { ...x, quantity : x.quantity - 1 } : x )
+                const decrement = state.map((x) => x.id === exist1.id ? { ...x, quantity: x.quantity - 1 } : x)
+                return decrement
             }
             break;
+
+        case "DELETE_TO_CART":
+
+                return state.filter((x) => x.id !== product.id)
+
+            break;
+
 
         default:
             return state

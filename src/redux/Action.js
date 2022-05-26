@@ -12,3 +12,10 @@ export const removeCart = (product) =>{
         payload : product,
     }
 }
+
+export const deleteCart = (product) =>{
+    return{ 
+        type : "DELETE_TO_CART",
+        payload : product,
+    }
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import { Alert, Button, Card, Col, ListGroup, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addCart, removeCart } from '../redux/Action';
+import { addCart, deleteCart, removeCart } from '../redux/Action';
 
 const CartScreen = () => {
 
@@ -19,19 +19,23 @@ const CartScreen = () => {
         dispatch(removeCart(product))
     }
 
-    const itemPrice = products.reduce( (a, c) => a + c.quantity * c.price, 0)
+    const handleCartItemDelete = (product) => {
+        dispatch(deleteCart(product))
+    }
+
+    const itemPrice = products.reduce((a, c) => a + c.quantity * c.price, 0)
     const totalTax = itemPrice * 10 / 100
     const totalPrice = itemPrice + totalTax
 
     return (
         <div className='container mt-5'>
-            {
-                products.length === 0 && <Alert variant="primary">
-                    Your cart is empty <Link to="/products">Go to Shopping</Link>
-                </Alert>
-            }
             <Row>
                 <Col md={8}>
+                    {
+                        products.length === 0 && <Alert variant="primary">
+                            Your cart is empty <Link to="/products">Go to Shopping</Link>
+                        </Alert>
+                    }
                     {
                         products.map(product => (
                             <Row key={product.id} className="my-2 border">
@@ -53,7 +57,7 @@ const CartScreen = () => {
                                     </Button>
                                 </Col>
                                 <Col md={3} className="p-1 border d-flex align-items-center justify-content-center">
-                                    <Button variant="outline-dark">
+                                    <Button variant="outline-dark" onClick={() => handleCartItemDelete(product)}>
                                         <i className="fa-solid fa-trash-can"></i>
                                     </Button>
                                 </Col>
