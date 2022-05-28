@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Badge, Container, Nav, Navbar } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
 const Header = () => {
 
-    const state = useSelector((state)=> state.handleCart)
+    const state = useSelector((state) => state.handleCart)
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
@@ -24,7 +24,11 @@ const Header = () => {
                             <Nav.Link> Products </Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/cart">
-                            <Nav.Link> Cart {state.length === 0 ? " " : state.length}</Nav.Link>
+                            <Nav.Link>
+                                Cart <Badge bg="danger">
+                                    {state.cart.cartItem.length === 0 ? " " : state.cart.cartItem.length}
+                                </Badge>
+                            </Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

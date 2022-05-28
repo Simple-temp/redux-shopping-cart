@@ -10,7 +10,9 @@ export default
             "rating": {
                 "rate": 3.9,
                 "count": 120
-            }
+            },
+            "quantity" : 1,
+            "stock" : 6,
         },
         {
             "id": 2,
@@ -22,7 +24,9 @@ export default
             "rating": {
                 "rate": 4.1,
                 "count": 259
-            }
+            },
+            "quantity" : 1,
+            "stock" : 9,
         },
         {
             "id": 3,
@@ -34,7 +38,9 @@ export default
             "rating": {
                 "rate": 4.7,
                 "count": 500
-            }
+            },
+            "quantity" : 1,
+            "stock" : 8,
         },
         {
             "id": 4,
@@ -46,7 +52,9 @@ export default
             "rating": {
                 "rate": 2.1,
                 "count": 430
-            }
+            },
+            "quantity" : 1,
+            "stock" : 6,
         },
         {
             "id": 5,
@@ -58,7 +66,9 @@ export default
             "rating": {
                 "rate": 4.6,
                 "count": 400
-            }
+            },
+            "quantity" : 1,
+            "stock" : 11,
         },
         {
             "id": 6,
@@ -70,7 +80,9 @@ export default
             "rating": {
                 "rate": 3.9,
                 "count": 70
-            }
+            },
+            "quantity" : 1,  
+            "stock" : 5,      
         },
         {
             "id": 7,
@@ -82,7 +94,9 @@ export default
             "rating": {
                 "rate": 3,
                 "count": 400
-            }
+            },
+            "quantity" : 1,
+            "stock" : 9,
         },
         {
             "id": 8,
@@ -94,7 +108,9 @@ export default
             "rating": {
                 "rate": 1.9,
                 "count": 100
-            }
+            },
+            "quantity" : 1,
+            "stock" : 10,
         },
         {
             "id": 9,
@@ -106,7 +122,9 @@ export default
             "rating": {
                 "rate": 3.3,
                 "count": 203
-            }
+            },
+            "quantity" : 1,
+            "stock" : 13,
         },
         {
             "id": 10,
@@ -118,7 +136,9 @@ export default
             "rating": {
                 "rate": 2.9,
                 "count": 470
-            }
+            },
+            "quantity" : 1,
+            "stock" : 10,
         },
         {
             "id": 11,
@@ -130,7 +150,9 @@ export default
             "rating": {
                 "rate": 4.8,
                 "count": 319
-            }
+            },
+            "quantity" : 1,
+            "stock" : 11,
         },
         {
             "id": 12,
@@ -142,7 +164,9 @@ export default
             "rating": {
                 "rate": 4.8,
                 "count": 400
-            }
+            },
+            "quantity" : 1,
+            "stock" : 4,
         },
         {
             "id": 13,
@@ -154,7 +178,9 @@ export default
             "rating": {
                 "rate": 2.9,
                 "count": 250
-            }
+            },
+            "quantity" : 1,
+            "stock" : 6,
         },
         {
             "id": 14,
@@ -166,7 +192,9 @@ export default
             "rating": {
                 "rate": 2.2,
                 "count": 140
-            }
+            },
+            "quantity" : 1,
+            "stock" : 11,
         },
         {
             "id": 15,
@@ -178,7 +206,9 @@ export default
             "rating": {
                 "rate": 2.6,
                 "count": 235
-            }
+            },
+            "quantity" : 1,
+            "stock" : 3,
         },
         {
             "id": 16,
@@ -190,7 +220,9 @@ export default
             "rating": {
                 "rate": 2.9,
                 "count": 340
-            }
+            },
+            "quantity" : 1,
+            "stock" : 7,
         },
         {
             "id": 17,
@@ -202,7 +234,9 @@ export default
             "rating": {
                 "rate": 3.8,
                 "count": 679
-            }
+            },
+            "quantity" : 1,
+            "stock" : 7,
         },
         {
             "id": 18,
@@ -214,7 +248,9 @@ export default
             "rating": {
                 "rate": 4.7,
                 "count": 130
-            }
+            },
+            "quantity" : 1,
+            "stock" : 8,
         },
         {
             "id": 19,
@@ -226,7 +262,9 @@ export default
             "rating": {
                 "rate": 4.5,
                 "count": 146
-            }
+            },
+            "quantity" : 1,
+            "stock" : 4,
         },
         {
             "id": 20,
@@ -238,6 +276,8 @@ export default
             "rating": {
                 "rate": 3.6,
                 "count": 145
-            }
+            },
+            "quantity" : 1,
+            "stock" : 5,
         }
     ]

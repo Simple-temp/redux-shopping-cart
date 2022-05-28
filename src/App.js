@@ -6,11 +6,14 @@ import CartScreen from './screen/CartScreen';
 import HomeScreen from './screen/HomeScreen';
 import ProductDetailsScreen from './screen/ProductDetailsScreen';
 import ProductsScreen from './screen/ProductsScreen';
+import { ToastContainer, } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="inner-container d-flex flex-column">
+        <ToastContainer position='top-right' limit={1} />
         <header>
           <Header/>
         </header>

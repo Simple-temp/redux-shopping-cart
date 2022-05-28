@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
-// import fakedata from "../fakedata/data"
+import fakedata from "../fakedata/data"
 import Skeleton from 'react-loading-skeleton'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -11,15 +11,14 @@ const Product = () => {
     const [data, setData] = useState([])
     const [filter, setFilter] = useState(data)
     const [loading, setLoading] = useState(false)
-    const navigate = useNavigate()
 
     useEffect(() => {
 
         const getProducts = async () => {
             setLoading(true)
-            const { data } = await axios.get(`https://fakestoreapi.com/products`)
-            setData(data)
-            setFilter(data)
+            // const { data } = await axios.get(`https://fakestoreapi.com/products`)
+            setData(fakedata)
+            setFilter(fakedata)
             setLoading(false)
         }
         getProducts()
